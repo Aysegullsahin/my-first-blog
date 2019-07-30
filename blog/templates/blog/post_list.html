@@ -1,15 +1,22 @@
-            {% extends 'blog/base.html' %}
+{% extends 'blog/base.html' %}
 
-                {% block content %}
-                    {% for post in posts %}
-                        <div class="post">
-                            <div class="date">
-                                 {{ post.published_date }}
-                            </div>
-                            <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
-                            <p>{{ post.text|linebreaksbr }}</p>
-                        </div>
-                    {% endfor %}
-                {% endblock %}
-               
- 
+<div class="all">
+    {% block content %}
+        <h1 class="category_title">{{ category.title }}</h1>
+        {% for post in  posts %}
+            <div class="post">
+                <div class="date">
+                    {{ post.published_date }}
+                </div>
+                <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+                <p>{{ post.text|linebreaksbr }}</p>
+            </div>
+        {% endfor %}
+    {% endblock %}
+</div>
+
+{% block sidebar %}
+    {% for category in categories %}
+        <li><a href="{% url 'category_detail' pk=category.pk %}">{{ category.title }}</a></li>
+        {% endfor %}
+{% endblock %}

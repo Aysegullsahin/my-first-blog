@@ -25,6 +25,11 @@ body {
 
 h1, h2, h3, h4 {
     font-family: 'Lobster', cursive;
+    color: #fca205;
+}
+
+.category_title{
+    color: darkgreen;
 }
 
 .date {
@@ -32,16 +37,47 @@ h1, h2, h3, h4 {
 }
 
 .save {
-    float: right;
+    float: left;
 }
 
 .post-form textarea, .post-form input {
-    width: 100%;
+    width: 700px;;
+    
 }
 
 .top-menu, .top-menu:hover, .top-menu:visited {
-    color: #ffffff;
+    color: white;
     float: right;
     font-size: 26pt;
     margin-right: 20px;
+}
+
+.col-md-8{
+    width: 850px;
+    float: left;
+}
+
+.sidebar {
+    float: right;
+    color: orangered;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: absolute;
+    top: 180px;
+    right: 65px;
+    
+
+}
+
+.post-form{
+    float: left;
+}
+
+.sidebar a {
+    
+    color: #ff9400;
+}
+
+.sidebar ul li{
+    list-style-type: none;
 }

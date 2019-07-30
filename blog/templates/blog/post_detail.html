@@ -1,5 +1,6 @@
 {% extends 'blog/base.html' %}
 
+
 {% block content %}
     <div class="post">
         {% if post.published_date %}
@@ -11,7 +12,22 @@
         <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}">
         <span class="glyphicon glyphicon-pencil"></span></a>
         {% endif %}
-        <h1>{{ post.title }}</h1>
+        {% if user.is_authenticated %}
+        <form method="post" action="{% url 'post_delete' pk=post.pk %}" class="post-form">
+            {% csrf_token %}
+            <button type="submit" class="save btn btn-default" href="{% url 'post_delete' pk=post.pk %}">Sil
+            </button>
+        </form>
+        {% endif %}
+        <h1 class="category_title">{{post.category.title}}</h1>
+        <h2>{{ post.title }}</h2>
         <p>{{ post.text|linebreaksbr }}</p>
     </div>
+{% endblock %}
+
+{% block sidebar %}
+{% for category in categories %}
+<li><a href=" ">{{ category.title }}</a></li>
+{% endfor %}
+
 {% endblock %}
