@@ -1,83 +1,74 @@
-h1 a{
-    color:#fca205;
-    font-family: 'Lobster';
-}
-
 body {
-    padding-left: 15px;
+    padding: 0%;
 }
 
-.page-header {
-    background-color: #ff9400;
-    margin-top: 0;
-    padding: 20px 20px 20px 40px;
+.head {
+    margin-left: 15px;
+    width: 100%;
+    height: 200px;
+    color: black;
+    background-image: url('blogheader.jpg');
+    background-size: 100% auto;
 }
 
-.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
-    color: #ffffff;
-    font-size: 36pt;
-    text-decoration: none;
-}
-
-.content {
-    margin-left: 40px;
-}
-
-h1, h2, h3, h4 {
-    font-family: 'Lobster', cursive;
-    color: #fca205;
-}
-
-.category_title{
-    color: darkgreen;
-}
-
-.date {
-    color: #309c8e;
-}
-
-.save {
-    float: left;
-}
-
-.post-form textarea, .post-form input {
-    width: 700px;;
-    
-}
-
-.top-menu, .top-menu:hover, .top-menu:visited {
-    color: white;
+.post-new {
+    width: 30%;
     float: right;
-    font-size: 26pt;
-    margin-right: 20px;
+    text-align: center;
+    margin-top: 65px;
+    margin-right: 80px;
 }
 
-.col-md-8{
-    width: 850px;
-    float: left;
+h1 a, h4 a {
+    color: white;
 }
 
 .sidebar {
-    float: right;
-    color: orangered;
-    font-size: 20px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    position: absolute;
-    top: 180px;
-    right: 65px;
-    
-
-}
-
-.post-form{
+    margin-top: 60px;
+    font-family: "Source Sans Pro", "Arial", sans-serif;
+    font-size: 22pt;
     float: left;
+    line-height: 35pt;
 }
 
-.sidebar a {
-    
-    color: #ff9400;
+a{
+    color: black;
+    font-family: 'Lato', sans-serif;
 }
 
-.sidebar ul li{
-    list-style-type: none;
+.brand-logo {
+    width: 70%;
+    text-align: center;
+    text-align-last: center;
+    margin-left: 400px;;
+    margin-top: 65px;
+    color: white;
+}
+
+.post-text{
+    font-family: 'Lato', sans-serif;
+}
+
+.buttonedit a {
+    float: right;
+    margin-top: -15px;
+    background-color: #8d6e63;
+}
+
+.buttondelete a {
+    float: right;
+    margin-top: -15px;
+    background-color: #8d6e63;
+}
+
+.post h3 {
+    color: #4e342e;
+}
+
+.date {
+    margin-top: 5px;
+}
+
+.form-title {
+    color: #4e342e;
 }
